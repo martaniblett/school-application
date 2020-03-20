@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>{{ title }}</title>
+</head>
+<body>
+
+   
+	<a href="{{ url_for('home') }}">Today's Staff Rota</a>
+	    <a href="{{ url_for('class') }}">Class Register</a>
+            <a href="{{ url_for('staff') }}">Staff Register</a>
+            
+           
+
+{% block body_content %}
+{% endblock body_content %}
+</body>
+</html>

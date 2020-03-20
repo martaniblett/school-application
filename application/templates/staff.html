@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block body_content %}
+
+<p1>Staff Register</p1>
+
+
+<div class='form'>
+        <form method='POST' action=''>
+            {{ form.hidden_tag() }}
+
+            {{ form.first_name.label }}
+            {{ form.first_name }}
+            <br>
+            {{ form.last_name.label }}
+            {{ form.last_name }}
+            <br>
+            {{ form.email.label }}
+            {{ form.email }}
+            <br>
+            {{ form.DBS_status.label }}
+            {{ form.DBS_label }}
+            <br>
+            {{ form.submit }}
+        </form>
+    </div>
+{% endblock %}

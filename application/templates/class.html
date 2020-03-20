@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body_content %}
+
+<p1>Class Register</p1>
+
+
+<div class='form'>
+        <form method='POST' action=''>
+            {{ form.hidden_tag() }}
+            
+	    {{ form.class_name.label }}
+            {{ form.class_name }}
+            <br>
+            {{ form.age_range.label }}
+            {{ form.age_range }}
+            <br>
+            {{ form.room_number.label }}
+            {{ form.room_number }}
+            <br>
+            {{ form.submit }}
+        </form>
+    </div>
+{% endblock %}
