@@ -4,23 +4,30 @@
 <p1>Staff Register</p1>
 
 
-<div class='form'>
+	<div class='form'>
         <form method='POST' action=''>
-            {{ form.hidden_tag() }}
+    
+	{{ form.hidden_tag() }}
+
+	<div class='form_group'>
 
             {{ form.first_name.label }}
             {{ form.first_name }}
             <br>
+	<div class='form_group'>
             {{ form.last_name.label }}
             {{ form.last_name }}
             <br>
+	<div class='form_group'>
             {{ form.email.label }}
             {{ form.email }}
             <br>
-            {{ form.DBS_status.label }}
+	<div class='form_group'>    
+	    {{ form.DBS_status.label }}
             {{ form.DBS_label }}
             <br>
             {{ form.submit }}
+	    </div>
         </form>
     </div>
 {% endblock %}

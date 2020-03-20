@@ -6,11 +6,11 @@ from application.models import Classes, Staff
 
 @app.route('/')
 @app.route('/home')
-def home():
- return render_template('home.html', title='Home')
+def home(): 
+    return render_template('home.html', title='Home')
 
 @app.route('/')
-@app.route('/staff')
+@app.route('/staff', methods=['GET', 'POST'])
 def staff_register():
     form = StaffForm()
     staffData = Staff(
@@ -25,15 +25,15 @@ def staff_register():
     return render_template('staff.html', title='Staff Register', form=form)
 
 @app.route('/')
-@app.route('/class')
+@app.route('/class', methods=['GET', 'POST'])
 def class_register():
     form = ClassForm()
-    staffData = Classes(
+    classData = Classes(
             class_name = form.class_name.data,
             age_range = form.age_range.data,
             room_number = form.room_number.data,
             )
-    db.session.add(ClassesData)
+    db.session.add(classData)
     db.session.commit()
 
     return render_template('class.html', title='Class Register', form=form)

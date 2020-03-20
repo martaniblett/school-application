@@ -1,2 +1,2 @@
-export SECRET_KEY=' '
-export DATABASE_URI="mysql+pymysql://root:root@35.246.38.40/school"
+export SECRET_KEY='hgfhgfjk'
+export DATABASE_URI='mysql+pymysql://root:root@35.246.38.40/school'

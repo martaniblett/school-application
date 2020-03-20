@@ -7,17 +7,20 @@
 <div class='form'>
         <form method='POST' action=''>
             {{ form.hidden_tag() }}
-            
+	<div class='form_group'>            
 	    {{ form.class_name.label }}
             {{ form.class_name }}
             <br>
+	<div class='form_group'>    
             {{ form.age_range.label }}
             {{ form.age_range }}
             <br>
+	<div class='form_group'>    
             {{ form.room_number.label }}
             {{ form.room_number }}
             <br>
             {{ form.submit }}
+	    </div>
         </form>
     </div>
 {% endblock %}
