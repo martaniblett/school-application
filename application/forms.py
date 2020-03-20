@@ -17,6 +17,12 @@ class StaffForm(FlaskForm):
             Length(min=2, max=30)
         ]
     )
+    email = StringField('Email',
+        validators = [
+            DataRequired(),
+            Length(min=10, max=30)
+        ]
+    )
     DBS_status= StringField('DBS Status',
         validators = [
             DataRequired(),
