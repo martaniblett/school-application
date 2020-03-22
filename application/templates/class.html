@@ -1,26 +1,60 @@
 {% extends "layout.html" %}
 {% block body_content %}
 
-<p1>Class Register</p1>
+<h1>Class Register</h1>
+<h1>Create, update or delete class register information here:</h1>
+
+
 
 
 <div class='form'>
         <form method='POST' action=''>
             {{ form.hidden_tag() }}
-	<div class='form_group'>            
-	    {{ form.class_name.label }}
-            {{ form.class_name }}
+		<div class='form_group'>            
+		    {{ form.class_name.label }}
+		    {{ form.class_name }}
             <br>
-	<div class='form_group'>    
-            {{ form.age_range.label }}
-            {{ form.age_range }}
-            <br>
-	<div class='form_group'>    
-            {{ form.room_number.label }}
-            {{ form.room_number }}
-            <br>
-            {{ form.submit }}
+	    <br>
 	    </div>
-        </form>
-    </div>
+		<div class='form_group'>    
+        	    {{ form.age_range.label }}
+            	    {{ form.age_range }}
+            
+	   <br>
+	   <br>
+	   </div>
+		<div class='form_group'>    
+            	    {{ form.room_number.label }}
+            	    {{ form.room_number }}
+            
+	    <br>
+	    <br>
+	    <br>
+            </div>
+            </div>
+	    </div>
+
+		<div class="form-group">
+  	   	    {{ form.submit }}
+	    </div>
+      		</form>
+    	    </div>
+	    <br>
+            <br>
+            <br>
+
+
+
+     <form action="{{ url_for('class_update') }}">
+     <button type="submit">Update class</button>
+     </form>
+     	    <br>
+            <br>
+            <br>
+
+
+     <form action="{{ url_for('class_delete') }}">
+     <button type="submit">Delete class</button>
+     </form>
+
 {% endblock %}

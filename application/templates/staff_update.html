@@ -1,0 +1,39 @@
+                                                                                                                                                                                             
+{% extends "layout.html" %}
+{% block body_content %}
+<h1>Staff Register</h1>
+<h1>Create, update or delete staff register information:</h1>
+        <div class='form'>
+        <form method='POST' action=''>
+		{{ form.hidden_tag() }}
+
+	<div class='form_group'>
+	    {{ form.first_name.label }}
+            {{ form.first_name }}
+
+            <br>
+            <br>
+        <div class='form_group'>
+            {{ form.last_name.label }}
+            {{ form.last_name }}
+            <br>
+            <br>
+        <div class='form_group'>
+            {{ form.email.label }}
+            {{ form.email }}
+            <br>
+            <br>
+        <div class='form_group'>
+            {{ form.DBS_status.label }}
+            {{ form.DBS_status }}
+            <br>
+            <br>
+            <br>
+          </div>
+        <    </div>
+            <br>
+            <br>
+            <br>
+        <form action="{{ url_for('staff_update') }}">
+        <button type="submit">Update staff member details</button>
+        </form>

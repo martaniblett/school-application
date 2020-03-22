@@ -4,12 +4,18 @@
 </head>
 <body>
 
-   
+
 	<a href="{{ url_for('home') }}">Today's Staff Rota</a>
 	<a href="{{ url_for('class_register') }}">Class Register</a>
         <a href="{{ url_for('staff_register') }}">Staff Register</a>
-            
-           
+        
+
+	{% if url==url_for('class_register') %}
+	<a href="{{ url_for('class_update') }}">Class Update</a>          
+
+	{% endif %}
+
+
 
 {% block body_content %}
 {% endblock body_content %}

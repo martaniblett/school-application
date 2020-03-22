@@ -5,7 +5,7 @@ class Classes(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     class_name = db.Column(db.String(10), nullable=False)
     age_range = db.Column(db.String(10), nullable=False)
-    room_number = db.Column(db.Integer, nullable=False)
+    room_number = db.Column(db.String(2), nullable=False)
    
    #class_teacher = db.relationship('Staff', backref='teacher class', lazy=True)
     
@@ -21,7 +21,7 @@ class Staff(db.Model):
     first_name = db.Column(db.String(15), nullable=False)
     last_name = db.Column(db.String(15), nullable=False)
     email= db.Column(db.String(60), nullable=False)
-    DBS_status = db.Column(db.String(5), nullable=False)
+    DBS_status = db.Column(db.String(15), nullable=False)
     #teacher_class = db.relationship('Classes', backref='class teacher', lazy=True)
 
     def __repr__(self):
