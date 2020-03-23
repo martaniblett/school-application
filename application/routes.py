@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, redirect, url_for
 
 from application import app, db
 from application.forms import ClassForm, ClassUpdateForm, StaffForm, StaffUpdateForm
@@ -24,14 +24,13 @@ def staff_register():
         db.session.add(staffData)
         db.session.commit()
     
-
-
     return render_template('staff.html', title='Staff Register', form=form)
 
-@app.route('/staff/update', methods=['GET', 'POST'])
-def staff_update():
-    form = StaffUpdateForm()
-    update_staff=Staff.query.filter_by(name=last_name).first()
+
+@app.route('/staff/update/<last_name>', methods=['GET', 'POST'])
+def staff_update(last_name):
+    form = StaffUpdateForm() 
+    update_staff=Staff.query.filter_by(last_name=last_name).first()
     if form.validate_on_submit():
          staffData = Staff(        
             first_name = form.first_name.data,
@@ -39,20 +38,24 @@ def staff_update():
             email = form.email.data,
             DBS_status = form.DBS_status.data
             )
+
+         db.session.add(staffData)
          db.session.commit()
    
-   return redirect(url_for('home'))
+    return redirect(url_for('home'))
     
     
                  
     return render_template('staff.html', title='Staff Register', form=form)
-         
-@app.route('/staff/delete', methods=['GET', 'POST'])
-def staff_delete():
 
-    delete_staff=Staff.query.filter_by(name=last_name).first()
+        
+@app.route('/staff/delete/<last_name>', methods=['GET', 'POST'])
+def staff_delete(last_name):
+
+    staff_delete=Staff.query.filter_by(last_name=last_name).first()
     
-    db.session.delete(delete_staff)
+
+    db.session.delete(staff_delete)
     db.session.commit()
 
     return redirect(url_for('home'))

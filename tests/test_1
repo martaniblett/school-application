@@ -1,0 +1,43 @@
+import unittest
+from flask import abort, url_for
+from flask_testing import TestCase
+from application import app, db
+from application.models import Staff, Classes
+class TestBase(TestCase):
+
+	
+    def create_app(self):
+
+        config_name ='testing'
+        app.config.update(
+            SQLALCHEMY_DATABASE_URI='mysql+pymysql://root:root@35.246.38.40/school_test'
+        )
+        return app
+
+    def setUp(self):
+
+        db.session.commit()
+        db.drop_all()
+        db.create_all()
+
+        teacher1 = Users(first_name="teacher", last_name="teacher1", email="teacher1@teacher1.com", password="password")
+        teacher2 = Users(first_name="teacher", last_name="teacher2", email="teacher2@teacher2.com", password="password")
+
+        db.session.add(teacher1)
+        db.session.add(teacher2)
+        db.session.commit()
+
+    def tearDown(self):
+        db.session.remove()
+        db.drop_all()
+
+class TestViews(TestBase):
+
+    def test_homepage_view(self):
+        response = self.client.get(url_for('home'))
+        self.assertEqual(response.status_code, 200)
+
+    def test_staff_view(self):
+        target_url = url_for('staff')
+        response=self.client.get(target_url)
+        self.assertRedirects(response, redirect_url)

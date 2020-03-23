@@ -1,4 +1,5 @@
 from application import db
+from flask_table import Table, Col
 
 class Classes(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -7,8 +8,8 @@ class Classes(db.Model):
     room_number = db.Column(db.String(2), nullable=False)
 
 
-   # teacher_assigned = db.Column(db.Integer, ForeignKey('staff.id'))
-
+    teacher_assigned = db.Column(db.Integer, db.ForeignKey('staff.id'))
+    teacher = db.relationship("Staff", backref='class')
 
 class Staff(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -18,6 +19,14 @@ class Staff(db.Model):
     DBS_status = db.Column(db.String(15), nullable=False)
     
     
-   # class_assigned = db.relationship("Classes", back_populates = 'teacher_assigned', lazy = 'joined')
+    class_assigned = db.relationship("Classes", backref='current_teacher')
     
+'''
+class Results(Table):
+    id = Col('Id', show = 'False')
+    first_name = Col('First name')
+    last_name = Col('Last name')
+    email= Col('Email')
+    DBS_status = Col('DBS status')
 
+'''
