@@ -38,6 +38,20 @@
         </form>
     </div>
 	    <br>
+	    <br>
+{% for staff in staff %}
+	<h3>{{ staff.email }}</h3>
+{% endfor %}
+            <br>
+
+	<div class='form_group'>
+            {{ form.first_name.label }}
+            {{ form.first_name }}
+            <br>
+            <br>
+        <div class='form_group'>
+            {{ form.last_name.label }}
+            {{ form.last_name }}
             <br>
             <br>
 

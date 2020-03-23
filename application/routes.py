@@ -1,13 +1,15 @@
 from flask import render_template
 
 from application import app, db
-from application.forms import ClassForm, StaffForm
+from application.forms import ClassForm, ClassUpdateForm, StaffForm, StaffUpdateForm
 from application.models import Classes, Staff
 
 @app.route('/')
 @app.route('/home')
-def home(): 
-    return render_template('home.html', title='Home')
+def home():
+    
+    staffData = Staff.query.all()
+    return render_template('home.html', title='Home', staff=staffData)
 
 @app.route('/staff', methods=['GET', 'POST'])
 def staff_register():
@@ -21,12 +23,15 @@ def staff_register():
             )
         db.session.add(staffData)
         db.session.commit()
+    
+
 
     return render_template('staff.html', title='Staff Register', form=form)
 
 @app.route('/staff/update', methods=['GET', 'POST'])
 def staff_update():
     form = StaffUpdateForm()
+    update_staff=Staff.query.filter_by(name=last_name).first()
     if form.validate_on_submit():
          staffData = Staff(        
             first_name = form.first_name.data,
@@ -35,19 +40,22 @@ def staff_update():
             DBS_status = form.DBS_status.data
             )
          db.session.commit()
-    return redirect(url_for('staff'))
+   
+   return redirect(url_for('home'))
     
-    elif request.method == 'GET':
-        if last_name`:`
-         
-    return render_template('staff_updatee.html', title='Staff Updater', form=form)
+    
+                 
+    return render_template('staff.html', title='Staff Register', form=form)
          
 @app.route('/staff/delete', methods=['GET', 'POST'])
 def staff_delete():
-    db.session.delete(staffData)
+
+    delete_staff=Staff.query.filter_by(name=last_name).first()
+    
+    db.session.delete(delete_staff)
     db.session.commit()
 
-    return redirect(url_for('staff'))
+    return redirect(url_for('home'))
 
 
 @app.route('/class', methods=['GET', 'POST'])
