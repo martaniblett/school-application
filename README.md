@@ -6,8 +6,8 @@
    * [Sprint 1 - Minimum Viable Product](#MVP)
    
 [Project Management](#PM)
-   * [Trello Board] (#trello)  
-   * [Risk Assessment] (#RA)   
+   * [Trello Board](#trello)  
+   * [Risk Assessment](#RA)   
 
 [Design Architecture](#architecture)
    * [Entity Relationship Diagrams](#erd)
@@ -35,11 +35,13 @@ Specific:
 Motivation: many supplementary education organisations, such as the Polish Saturday School, need a simple information management system to ensure that staff, student and other records are up-to-date, easily accessible and secure.      
 
 
-
+<a name="MVP"></a>
+### Sprint 1 - Minimum Viable Product
 The final version of the School Application is envisaged as a fully functional web-based school management information system. This project is a 'sprint 1' that delivers first version of the app that allows to create and manipulate staff information and assignes staff to classes. 
 
 <a name="PM"></a>
 ## Project Management 
+
 <a name="trello"></a>
 ### Trello Board
 
@@ -48,35 +50,33 @@ The final version of the School Application is envisaged as a fully functional w
 <a name="RA"></a>
 ### Risk Assessment 
   
-  _document link here
+ ![Risk Assessment](/documentation/CI Pipeline.pdf)
   
 <a name="architecture"></a>
 ## Design Architecture
 <a name="erd"></a>
 ### Entity Relationship Diagrams
-![Final ERD](/Documentation/ERD_Final.jpg)
+![ERD](/documentation/ERD for School Application.pdf)
+
 #### Sprint 1 and the Big Picture
 The fully functional application will enable to create, manipulate and link different types of data and information about people, educational resources, timetables etc. The ERD document demostrates first stages of the project development, with Sprint 1 actually delivered. The initial plan was to develop a solution that shows a daily staff rota (sprint 2) to improve information for staff who would be able to easily check if there are any changes to their usual class assignment.
 
 <a name="Funct"></a>
 ## Development and Functionality
-* [Git](https://github.com/martaniblett/school-application) - Version Control System
+(https://github.com/martaniblett/school-application) - Version Control System
 
-link to IP
-
-
+![App](/documentation/2020-03-24.png)
+ 
+ 
 <a name="testing"></a>
 ## Testing
 Due to time constraints only very basic unit testing was developed, this area needs more attention at tne later stages of app development.
    
-   * [Report](#report)
+   
  
  <a name="depl"></a>
  ## Deployment
- 
  ![CI Pipeline](/documentation/CI Pipeline.pdf)
- 
- The app is run with Gunicorn
  
  <a name="improve"></a>
  ## Future Version Improvements
