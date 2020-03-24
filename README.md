@@ -53,13 +53,13 @@ The final version of the School Application is envisaged as a fully functional w
 <a name="RA"></a>
 ### Risk Assessment 
 
-![Risk Assessment](/documentation/CI Pipeline.png)
+![Risk Assessment](/documentation/CI Pipeline.pdf)
   
 <a name="architecture"></a>
 ## Design Architecture
 <a name="erd"></a>
 ### Entity Relationship Diagrams
-![ERD](/documentation/ERD for School Application.png)
+![ERD](/documentation/ERD for School Application.pdf)
 
 #### Sprint 1 and the Big Picture
 The fully functional application will enable to create, manipulate and link different types of data and information about people, educational resources, timetables etc. The ERD document demostrates first stages of the project development, with Sprint 1 actually delivered. The initial plan was to develop a solution that shows a daily staff rota (sprint 2) to improve information for staff who would be able to easily check if there are any changes to their usual class assignment.
@@ -78,12 +78,11 @@ Due to time constraints only very basic unit testing was developed, this area ne
    
 <a name="depl"></a>
 ## Deployment
-![CI](/documentation/CI Pipeline.png)
+![CI](/documentation/CI Pipeline.pdf)
  
 <a name="improve"></a>
 ## Future Version Improvements
  
- - Automate processes (eg. Jenkins, Selenium)
  - Improve graphic design 
  - Implement more complex architecture
  - Develop unit and integration tests
