@@ -74,6 +74,7 @@ Due to time constraints only very basic unit testing was developed, this area ne
  <a name="depl"></a>
  ## Deployment
  
+ ![CI Pipeline](documentation/CI Pipeline.pdf)
  The app is run with Gunicorn
  
  <a name="improve"></a>
