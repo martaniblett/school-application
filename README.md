@@ -76,7 +76,7 @@ Due to time constraints only very basic unit testing was developed, this area ne
  
  <a name="depl"></a>
  ## Deployment
- ![CI Pipeline](/documentation/CI Pipeline.pdf)
+ ![CI](/documentation/CI Pipeline.pdf)
  
  <a name="improve"></a>
  ## Future Version Improvements
