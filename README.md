@@ -53,7 +53,7 @@ The final version of the School Application is envisaged as a fully functional w
 <a name="RA"></a>
 ### Risk Assessment 
 
-![Risk Assessment](/documentation/Risk Register_Page_1.png)
+![Risk](/documentation/Risk Register_Page_1.png)
   
 <a name="architecture"></a>
 ## Design Architecture
@@ -78,7 +78,7 @@ Due to time constraints only very basic unit testing was developed, this area ne
    
 <a name="depl"></a>
 ## Deployment
-![CI](/documentation/CI Pipeline.pdf)
+![CI Pipeline](/documentation/CI Pipeline.png)
  
 <a name="improve"></a>
 ## Future Version Improvements
