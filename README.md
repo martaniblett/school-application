@@ -1,4 +1,4 @@
-#First QA Academy Project: School Application 
+#### First QA Academy Project: School Application 
 
 
 ## List of Contents
@@ -76,7 +76,7 @@ Due to time constraints only very basic unit testing was developed, this area ne
  
  <a name="depl"></a>
  ## Deployment
- ![CI](/documentation/CI Pipeline.pdf)
+![CI](/documentation/CI Pipeline.pdf)
  
  <a name="improve"></a>
  ## Future Version Improvements
