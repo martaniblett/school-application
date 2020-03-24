@@ -53,7 +53,7 @@ The final version of the School Application is envisaged as a fully functional w
 <a name="RA"></a>
 ### Risk Assessment 
 
-![Risk Assessment](/documentation/CI Pipeline.pdf)
+![Risk Assessment](/documentation/Risk Register_Page_1.png)
   
 <a name="architecture"></a>
 ## Design Architecture
