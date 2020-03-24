@@ -61,7 +61,7 @@ The fully functional application will enable to create, manipulate and link diff
 
 <a name="Funct"></a>
 ## Development and Functionality
-* [Git](https://https://github.com/martaniblett/school-application.git) - VCS
+* [Git](https://github.com/martaniblett/school-application) - Version Control System
 
 link to IP
 
