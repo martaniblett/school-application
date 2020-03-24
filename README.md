@@ -46,6 +46,9 @@ The final version of the School Application is envisaged as a fully functional w
 ### Trello Board
 
 [Trello](https://trello.com/b/J1s01rla/supplementary-school-volunteer-management-system) 
+![Trello](/documentation/2020-03-22.png)
+
+
 
 <a name="RA"></a>
 ### Risk Assessment 
@@ -73,13 +76,12 @@ The fully functional application will enable to create, manipulate and link diff
 Due to time constraints only very basic unit testing was developed, this area needs more attention at tne later stages of app development.
    
    
- 
- <a name="depl"></a>
- ## Deployment
+<a name="depl"></a>
+## Deployment
 ![CI](/documentation/CI Pipeline.pdf)
  
- <a name="improve"></a>
- ## Future Version Improvements
+<a name="improve"></a>
+## Future Version Improvements
  
  - Automate processes (eg. Jenkins, Selenium)
  - Improve graphic design 
