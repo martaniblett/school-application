@@ -13,15 +13,14 @@
    * [Entity Relationship Diagrams](#erd)
 
 [Development and Functionality](#Funct)
-     * [Report](#report)
-     
+   
 [Testing](#testing)
    * [Report](#report)
 
 [Deployment](#depl)
    * [Technologies Used](#tech)
      
-[Improvements for the Future](#improve)
+[Future Version Improvements](#improve)
 
 [Key Learnings](#learn)
 
@@ -89,7 +88,7 @@ Due to time constraints only very basic unit testing was developed, this area ne
  - Ensure data is input without errors
 
 <a name="learn"></a>
-## Key Learnings(#learn)
+## Key Learnings
 
 Working on this project has highlighted the importance of: 
 1. Incremental software development to detect problems at the earliest stage 
