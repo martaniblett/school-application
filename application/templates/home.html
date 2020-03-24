@@ -7,12 +7,12 @@
 {% block body_content %}
 
 
-<title>School Staff Members</title>
+<title>Change staff information here</title>
 
 
 {% for staff in staff %}
 	<div>
-		<p>{{ staff.first_name }}</h3>	<h3>{{ staff.last_name }}</h3> <h3>{{ staff.email }}</h3> <h3>{{ staff.DBS_status }}<p>
+	<p>{{ staff.first_name }}</p>	<p>{{ staff.last_name }}<p> <p>{{ staff.email }}</p> <p>{{ staff.DBS_status }}<p>
 
 
         <form action="{{ url_for('staff_update', staff_id=staff.id) }}">

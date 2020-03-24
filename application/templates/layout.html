@@ -1,20 +1,15 @@
 <html>
 <head>
+	<h1>School Information Management System</h1>	
     <title>{{ title }}</title>
 </head>
 <body>
 
 
-	<a href="{{ url_for('home') }}">Today's Staff Rota</a>
-	<a href="{{ url_for('class_register') }}">Class Register</a>
-        <a href="{{ url_for('staff_register') }}">Staff Register</a>
-        
-
-	{% if url==url_for('class_register') %}
-	<a href="{{ url_for('class_update') }}">Class Update</a>          
-
-	{% endif %}
-
+	<a href="{{ url_for('home') }}">Staff Information</a>
+	<a href="{{ url_for('class_register') }}">New Class</a>
+        <a href="{{ url_for('staff_register') }}">New Staff Member</a>
+                 
 
 
 {% block body_content %}

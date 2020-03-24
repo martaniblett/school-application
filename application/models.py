@@ -1,5 +1,5 @@
 from application import db
-from flask_table import Table, Col
+
 
 class Classes(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -20,13 +20,5 @@ class Staff(db.Model):
     
     
     class_assigned = db.relationship("Classes", backref='current_teacher')
-    
-'''
-class Results(Table):
-    id = Col('Id', show = 'False')
-    first_name = Col('First name')
-    last_name = Col('Last name')
-    email= Col('Email')
-    DBS_status = Col('DBS status')
+ 
 
-'''

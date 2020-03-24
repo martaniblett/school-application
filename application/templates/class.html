@@ -1,10 +1,10 @@
 {% extends "layout.html" %}
 {% block body_content %}
 
-<h1>Class Register</h1>
-<h1>Create, update or delete class register information here:</h1>
+<h2>Add new class:</h2>
 
-
+  	<br>
+        <br>
 
 
 <div class='form'>
@@ -39,20 +39,6 @@
             <br>
             <br>
 
-	    {% for class in classes %}
-	   	 <p>{{ last_name }}{{age_range }}{{room_number}}</p>
-	    {% endfor %}
-
-     <form action="{{ url_for('class_update') }}">
-     <button type="submit">Update class</button>
-     </form>
-     	    <br>
-            <br>
-            <br>
-
-
-     <form action="{{ url_for('class_delete') }}">
-     <button type="submit">Delete class</button>
-     </form>
+	   
 
 {% endblock %}

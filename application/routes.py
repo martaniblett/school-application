@@ -10,6 +10,7 @@ def home():
     
     staffData = Staff.query.all()
     return render_template('home.html', title='Home', staff=staffData)
+    
 
 @app.route('/staff', methods=['GET', 'POST'])
 def staff_register():
